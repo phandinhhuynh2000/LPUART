@@ -1,0 +1,256 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: phan huynh, fpt, LIC=CZLZX-HMN9B-01JP1-CW3G3-69JMQ-VFG0J
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\HOC_EMBEDED\ASSIGNMENT_UART\ASSIGNMENT.uvprojx
+Project File Date:  12/08/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'assignment_uart'
+source/nvic.c(2): warning: In file included from...
+./include\nvic.h(5): warning: In file included from...
+./include/common.h(22): warning: no newline at end of file [-Wnewline-eof]
+   22 |         
+      |         ^
+source/nvic.c(2): warning: In file included from...
+./include\nvic.h(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  122 |         NVIC_IRQn_CAN0_ORED                                                = 78u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                        ^
+./include\nvic.h(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  132 |         NVIC_IRQn_CAN1_ORED_Transmit             = 85u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                              ^
+./include\nvic.h(140): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  140 |         NVIC_IRQn_CAN2_ORED                                                      = 92u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                              ^
+source/nvic.c(7): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+    7 |         NVIC->ISER[NVIC_IRQn_LPIT0_ch0/32] = SET_BIT(NVIC->ISER[NVIC_IRQn_LPIT0_ch0/32], (NVIC_IRQn_LPIT0_ch0 % 32));
+      |         ^~~~~~~~~~
+./include\nvic.h(201): note: expanded from macro 'NVIC'
+  201 | #define NVIC                                                                                            ((nvic_t *) NVIC_address_base)
+      |                                                                                                         ^
+source/nvic.c(7): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+    7 |         NVIC->ISER[NVIC_IRQn_LPIT0_ch0/32] = SET_BIT(NVIC->ISER[NVIC_IRQn_LPIT0_ch0/32], (NVIC_IRQn_LPIT0_ch0 % 32));
+      |                                              ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include\nvic.h(201): note: expanded from macro 'NVIC'
+  201 | #define NVIC                                                                                            ((nvic_t *) NVIC_address_base)
+      |                                                                                                         ^
+./include\nvic.h(204): note: expanded from macro 'SET_BIT'
+  204 | #define SET_BIT(reg, offset)            ((reg) |= (1 << (offset)))
+      |                                           ^~~
+source/nvic.c(12): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   12 |         NVIC->ISER[NVIC_IRQn_LUART1_Transmit/32] = SET_BIT(NVIC->ISER[NVIC_IRQn_LUART1_Transmit/32], (NVIC_IRQn_LUART1_Transmit%32));
+      |         ^~~~~~~~~~
+./include\nvic.h(201): note: expanded from macro 'NVIC'
+  201 | #define NVIC                                                                                            ((nvic_t *) NVIC_address_base)
+      |                                                                                                         ^
+source/nvic.c(12): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   12 |         NVIC->ISER[NVIC_IRQn_LUART1_Transmit/32] = SET_BIT(NVIC->ISER[NVIC_IRQn_LUART1_Transmit/32], (NVIC_IRQn_LUART1_Transmit%32));
+      |                                                    ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include\nvic.h(201): note: expanded from macro 'NVIC'
+  201 | #define NVIC                                                                                            ((nvic_t *) NVIC_address_base)
+      |                                                                                                         ^
+./include\nvic.h(204): note: expanded from macro 'SET_BIT'
+  204 | #define SET_BIT(reg, offset)            ((reg) |= (1 << (offset)))
+      |                                           ^~~
+source/nvic.c(17): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   17 |         NVIC->ISER[NVIC_IRQn_LUART1_Receive/32] = SET_BIT(NVIC->ISER[NVIC_IRQn_LUART1_Receive/32], (NVIC_IRQn_LUART1_Receive%32));
+      |         ^~~~~~~~~~
+./include\nvic.h(201): note: expanded from macro 'NVIC'
+  201 | #define NVIC                                                                                            ((nvic_t *) NVIC_address_base)
+      |                                                                                                         ^
+source/nvic.c(17): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   17 |         NVIC->ISER[NVIC_IRQn_LUART1_Receive/32] = SET_BIT(NVIC->ISER[NVIC_IRQn_LUART1_Receive/32], (NVIC_IRQn_LUART1_Receive%32));
+      |                                                   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include\nvic.h(201): note: expanded from macro 'NVIC'
+  201 | #define NVIC                                                                                            ((nvic_t *) NVIC_address_base)
+      |                                                                                                         ^
+./include\nvic.h(204): note: expanded from macro 'SET_BIT'
+  204 | #define SET_BIT(reg, offset)            ((reg) |= (1 << (offset)))
+      |                                           ^~~
+10 warnings generated.
+compiling nvic.c...
+source/lpuart.c(2): warning: In file included from...
+./include\lpuart.h(5): warning: In file included from...
+./include/common.h(22): warning: no newline at end of file [-Wnewline-eof]
+   22 |         
+      |         ^
+source/lpuart.c(5): warning: In file included from...
+./include\nvic.h(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  122 |         NVIC_IRQn_CAN0_ORED                                                = 78u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                        ^
+./include\nvic.h(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  132 |         NVIC_IRQn_CAN1_ORED_Transmit             = 85u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                              ^
+./include\nvic.h(140): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  140 |         NVIC_IRQn_CAN2_ORED                                                      = 92u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                              ^
+source/lpuart.c(93): warning: argument 'character' of type 'volatile unsigned char[]' with mismatched bound [-Warray-parameter]
+   93 | void transmitter_1_string(volatile unsigned char character[])
+      |                                                  ^
+./include\lpuart.h(204): note: previously declared as 'volatile unsigned char[255]' here
+  204 | void transmitter_1_string(volatile unsigned char character[255]);
+      |                                                  ^
+source/lpuart.c(99): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   99 |         uint32_t i = 0;
+      |                  ^
+source/lpuart.c(100): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  100 |         while(character[i] != NULL )
+      |               ^~~~~~~~~
+source/lpuart.c(102): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  102 |                 LPUART1->LPUART_DATA.LPUART_DATA_t.LPUART_DATA_R1T1 = character[i];
+      |                                                                       ^~~~~~~~~
+8 warnings generated.
+compiling lpuart.c...
+source/delay.c(2): warning: In file included from...
+./include\lpit.h(5): warning: In file included from...
+./include/common.h(22): warning: no newline at end of file [-Wnewline-eof]
+   22 |         
+      |         ^
+source/delay.c(5): warning: In file included from...
+./include\nvic.h(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  122 |         NVIC_IRQn_CAN0_ORED                                                = 78u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                        ^
+./include\nvic.h(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  132 |         NVIC_IRQn_CAN1_ORED_Transmit             = 85u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                              ^
+./include\nvic.h(140): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  140 |         NVIC_IRQn_CAN2_ORED                                                      = 92u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                              ^
+4 warnings generated.
+compiling delay.c...
+source/PORT_IRQHANDLER.c(2): warning: In file included from...
+./include\port.h(5): warning: In file included from...
+./include/common.h(22): warning: no newline at end of file [-Wnewline-eof]
+   22 |         
+      |         ^
+source/PORT_IRQHANDLER.c(5): warning: In file included from...
+./include\nvic.h(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  122 |         NVIC_IRQn_CAN0_ORED                                                = 78u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                        ^
+./include\nvic.h(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  132 |         NVIC_IRQn_CAN1_ORED_Transmit             = 85u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                              ^
+./include\nvic.h(140): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  140 |         NVIC_IRQn_CAN2_ORED                                                      = 92u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                              ^
+4 warnings generated.
+compiling PORT_IRQHANDLER.c...
+source/clock.c(2): warning: In file included from...
+./include\common.h(22): warning: no newline at end of file [-Wnewline-eof]
+   22 |         
+      |         ^
+1 warning generated.
+compiling clock.c...
+source/main.c(2): warning: In file included from...
+./include\lpuart.h(5): warning: In file included from...
+./include/common.h(22): warning: no newline at end of file [-Wnewline-eof]
+   22 |         
+      |         ^
+source/main.c(5): warning: In file included from...
+./include\nvic.h(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  122 |         NVIC_IRQn_CAN0_ORED                                                = 78u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                        ^
+./include\nvic.h(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  132 |         NVIC_IRQn_CAN1_ORED_Transmit             = 85u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                              ^
+./include\nvic.h(140): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  140 |         NVIC_IRQn_CAN2_ORED                                                      = 92u, /* OR<92>ed [Bus Off OR Bus Off Done OR Transmit Warning OR Receive Warning] */
+      |                                                                                              ^
+source/main.c(75): warning: passing 'char[1000]' to parameter of type 'volatile unsigned char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   75 |                         transmitter_1_string(res);
+      |                                              ^~~
+./include\lpuart.h(204): note: passing argument to parameter 'character' here
+  204 | void transmitter_1_string(volatile unsigned char character[255]);
+      |                                                  ^
+source/main.c(36): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   36 |                         uint32_t num1index = 0;
+      |                                  ^
+source/main.c(42): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   42 |                                 char current_string = string_user[index];
+      |                                                       ^~~~~~~~~~~
+source/main.c(49): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   49 |                                                 string1[num1index] = current_string;
+      |                                                 ^~~~~~~
+source/main.c(54): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   54 |                                                 string2[num2index] = current_string;
+      |                                                 ^~~~~~~
+9 warnings generated.
+compiling main.c...
+C:/Users/dinhp/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/startup.c(222): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  222 |             vector_ram[n] = vector_rom[n];
+      |             ^~~~~~~~~~
+C:/Users/dinhp/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/startup.c(222): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  222 |             vector_ram[n] = vector_rom[n];
+      |                             ^~~~~~~~~~
+C:/Users/dinhp/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/startup.c(225): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  225 |          *s_vectors[coreId] = (uint32_t) __VECTOR_RAM;
+      |           ^~~~~~~~~
+C:/Users/dinhp/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/startup.c(230): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  230 |         *s_vectors[coreId] = (uint32_t) __VECTOR_ROM;
+      |          ^~~~~~~~~
+4 warnings generated.
+compiling startup.c...
+RTE/Device/S32K144HAxxxLLx/system_S32K144.c(148): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  148 |       SCGOUTClock= fircFreq[regValue];
+      |                    ^~~~~~~~
+1 warning generated.
+compiling system_S32K144.c...
+linking...
+Program Size: Code=15528 RO-data=1172 RW-data=0 ZI-data=4184  
+".\Objects\ASSIGNMENT.axf" - 0 Error(s), 41 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.S32_SDK_DFP.1.5.0.pack
+                Keil::S32_SDK_DFP@1.5.0
+                NXP S32 SDK S32K14x Device Support
+   * Component: Startup Version: 2.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/S32K144HAxxxLLx
+  ./RTE/_assignment_uart
+  C:/Users/dinhp/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/dinhp/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices
+  C:/Users/dinhp/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:Startup@2.0.0
+      Include file:  platform/devices/device_registers.h
+      Include file:  platform/devices/S32K144/startup/system_S32K144.h
+      Source file:   platform/devices/startup.c
+      Source file:   platform/devices/S32K144/startup/armc/startup_S32K144.S
+      Source file:   platform/devices/S32K144/startup/system_S32K144.c
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
